@@ -5,8 +5,15 @@
 // 輸出說明: 請直接console.log出是否合法
 
 let checkId = function (id: string) {
-
+    var a = (parseInt(id.charAt(0)) * 10 + parseInt(id.charAt(1)) * 9 + parseInt(id.charAt(2)) * 8);
+    if (a % 5 == 0) {
+        console.log(id, '合法')
+        a = 0;
+    }
+    console.log(id, '不合法')
+    a = 0;
 }
+
 
 checkId('425') // 不合法
 checkId('355') // 合法
